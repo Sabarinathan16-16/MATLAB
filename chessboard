@@ -1,0 +1,11 @@
+clc;clear;close all;
+chessboard = zeros(8,8);
+for i = 1:8
+    for j = 1:8
+        chessboard(i,j) = mod(i + j, 2);
+    end
+end
+imagesc(chessboard);
+colormap([1 1 1; 0 0 0]);  
+axis equal off;           
+title('Chess Board');
